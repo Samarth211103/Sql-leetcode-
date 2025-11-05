@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
-select w.id 
+select we.id 
 from weather w
 cross join weather we
-where datediff(w.recordDate, we.recordDate) = 1
-and w.temperature > we.temperature;
+where datediff(we.recordDate, w.recordDate) = 1
+and we.temperature > w.temperature;
